@@ -18,6 +18,7 @@
     }
 
     body{
+        font-family: 'Roboto', sans-serif;
         color: var(--title-color);
         background-color: var(--white-color);
     }
@@ -30,6 +31,10 @@
         text-decoration: none;
     }
     .logo{
+        font-family: 'Raleway', sans-serif;
+        font-size: 26px;
+        line-height: 1.19;
+        letter-spacing: 0.03em;
         color: var(--accent-color);
     }
     .logo-light{
@@ -37,6 +42,14 @@
     }
 
     /* Navigation */
+
+    .site-nav .link,
+    .contact-list .link{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+    }
 
     .site-nav .link{
         color: var(--title-color)
@@ -66,12 +79,28 @@
         background-color: var(--secondary-bg-color);
     }
     .hero-title{
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        /* text-align: center; */
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
         color: var(--white-color);
     }
 
     .order-button{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        /* display: flex;
+        align-items: center;
+        text-align: center; */
+        letter-spacing: 0.06em;
         color: var(--white-color);
         background-color: var(--accent-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        border: none;
     }
 
     .order-button:hover,
@@ -82,10 +111,26 @@
     /* Sections */
 
     .features-title{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
         color: var(--title-color);
     }
     .features-text{
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
         color: var(--text-color);
+    }
+
+    .section-title{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+        /* text-align: center; */
+        letter-spacing: 0.03em;
     }
 
     /* Our Team */
@@ -93,8 +138,11 @@
     .our-team{
         background-color: var(--light-grey-color);
     }
-    
+
     .team-position{
+        line-height: 1.19;
+        /* text-align: center; */
+        letter-spacing: 0.03em;
         color: var(--text-color);
     }
 
@@ -106,10 +154,39 @@
         color: var(--white-color);
     }
 
+    .footer-list{
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
     .footer-address-link{
         color: var(--white-color);
     }
     .footer-tel-link, 
     .footer-mail-link{
         color: var(--transparent-white-color);
+    }
+
+
+    /* ===== PORTFOLIO SECTION ====== */
+
+    /* Buttons */
+
+    .filter-button{
+        color: var(--title-color);
+        background-color: var(--light-grey-color);
+        border-radius: 4px;
+        border: none;
+    }
+
+    .filter-button:hover,
+    .filter-button:focus{
+        color: var(--white-color);
+        background-color: var(--accent-color);
+    }
+
+    /* Portfolio */
+
+    .project-class{
+        color: var(--text-color);
     }
