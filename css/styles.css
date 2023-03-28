@@ -101,9 +101,9 @@ body {
 }
 
 .contact-list .link {
-
   color: var(--text-color);
 }
+
 .contact-list .item{
   margin-left: 50px;
 }
@@ -116,12 +116,13 @@ body {
   background-image: url(../images/envelope.png);
 }
 
+
 .telephone::before{
   content: "";
   display: inline-block;
   width: 10px;
   height: 16px;
-  background-image: url(../images/smartphone.png)
+  background-image: url(../images/smartphone.png);
 }
 
 .contact-list .link:hover,
@@ -325,7 +326,6 @@ body {
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: center; 
-  border-radius: 50%;
 }
 
 
@@ -344,6 +344,46 @@ body {
 .linkedin{
   background-image: url(../images/our-team/soc-links/linkedin.png);
 }
+
+.clients-links{
+  display: flex;
+}
+
+.clients-links .item + .item{
+  margin-left: 30px;
+}
+
+.icon-company{
+  display: inline-block;
+  padding: 16px 32px;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.icon1{
+  background-image: url(../images/clients/group1.png);
+}
+.icon2{
+  background-image: url(../images/clients/group2.png);
+}
+.icon3{
+  background-image: url(../images/clients/group3.png);
+}
+.icon4{
+  background-image: url(../images/clients/group4.png);
+}
+.icon5{
+  background-image: url(../images/clients/group5.png);
+}
+.icon6{
+  background-image: url(../images/clients/group6.png);
+}
+
 /* Footer */
 .footer {
   padding: 60px 0;
@@ -381,6 +421,44 @@ body {
 .footer-mail.link {
   color: var(--transparent-white-color);
 }
+
+.footer .container{
+  display: flex;
+}
+
+.join-us{
+  display: inline-block;
+  margin-left: 70px;
+}
+
+.social-links .item +.item{
+margin-left: 10px;
+}
+
+.features-title.join{
+  margin-bottom: 20px;
+  color: var(--white-color);
+}
+
+.social-links .item{
+  margin-bottom: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.instagram-footer{
+  background-image: url(../images/footer/instagram-f.png);
+}
+.twitter-footer{
+  background-image: url(../images/footer/twitter-f.png);
+}
+.facebook-footer{
+  background-image: url(../images/footer/facebook-f.png);
+}
+.linkedin-footer{
+  background-image: url(../images/footer/linkedin-f.png);
+}
+
 
 /* ===== PORTFOLIO SECTION ====== */
 
