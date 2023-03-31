@@ -306,44 +306,9 @@ body {
   color: var(--text-color);
 }
 
-.social-links{
-  display: flex;
-  justify-content: center;
-}
-
-.social-links li{
-  margin-right: 10px;
-  margin-bottom: 30px;
-}
-.social-links li:last-child{
-  margin-right: 0;
-}
-
-.social-links a{
-  display: inline-block;
-  width: 44px;
-  height: 44px;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center; 
-}
 
 
-.instagram{
-  background-image: url(../images/our-team/soc-links/instagram.png);
-}
 
-.twitter{
-  background-image: url(../images/our-team/soc-links/twitter.png);
-}
-
-.facebook{
-  background-image: url(../images/our-team/soc-links/facebook.png);
-}
-
-.linkedin{
-  background-image: url(../images/our-team/soc-links/linkedin.png);
-}
 
 .clients-links{
   display: flex;
@@ -431,6 +396,45 @@ body {
   margin-left: 70px;
 }
 
+
+/* ===== SOCIAL LINKS LIST ===== */
+
+.social-links {
+  display: flex;
+}
+
+.link-item{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--white-color);
+}
+.link-item:hover {
+  background-color: yellow;
+}
+
+.link-icon {
+  fill: currentColor;
+}
+
+.link-icon:hover{
+  fill: red;
+}
+
+
+.social-links a:hover{
+  background-color: var(--accent-color);
+}
+
+.social-links a:last-child{
+  margin-right: 0;
+}
+
 .social-links .item +.item{
 margin-left: 10px;
 }
@@ -440,24 +444,7 @@ margin-left: 10px;
   color: var(--white-color);
 }
 
-.social-links .item{
-  margin-bottom: 0;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-}
 
-.instagram-footer{
-  background-image: url(../images/footer/instagram-f.png);
-}
-.twitter-footer{
-  background-image: url(../images/footer/twitter-f.png);
-}
-.facebook-footer{
-  background-image: url(../images/footer/facebook-f.png);
-}
-.linkedin-footer{
-  background-image: url(../images/footer/linkedin-f.png);
-}
 
 
 /* ===== PORTFOLIO SECTION ====== */
@@ -544,8 +531,10 @@ margin-bottom: 20px;
 
 .project-class {
     margin: 0 24px;
+    height: 100px;
 
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--text-color);
 }
+
