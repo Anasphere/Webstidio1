@@ -407,7 +407,7 @@ img{
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   color: var(--social-links);
-  
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-icon{
@@ -416,12 +416,11 @@ img{
   fill: currentColor;
 }
 
-.company-icon:hover{
-  fill: var(--accent-color);
-}
 
-.company-link:hover{
+.company-link:hover,
+.company-link:focus {
   color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 
@@ -443,28 +442,26 @@ img{
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
-  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list .link:hover,
 .footer-list .link:focus {
   color: var(--accent-color);
-
-  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-address-link {
   color: var(--white-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-tel,
 .footer-mail {
   margin-top: 9px;
 }
 
-.footer-tel.link,
-.footer-mail.link {
+.footer-tel,
+.footer-mail {
   color: var(--transparent-white-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .container{
@@ -492,6 +489,7 @@ img{
 
 .social-links .link-item{
   fill: var(--social-links);
+  background-color: rgba(255, 255, 255, 0.1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -510,7 +508,7 @@ img{
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.1);
 }
 
 .footer-links .link-icon {
@@ -747,12 +745,15 @@ margin-bottom: 20px;
   height: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-
-  background-image: url(../images/svg-opt/close-black.svg);
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
+.close-icon{
+  fill: currentColor;
+}
+
+.modal-button:hover .close-icon{
+  color: var(--accent-color);
+}
 
 /* ============ FORM ============ */
 
@@ -761,13 +762,27 @@ margin-bottom: 20px;
 }
 
 .form-field{
+  position: relative;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
+  margin-bottom: 28px;
+}
+
+/* label.form-field:nth-child(4){
   margin-bottom: 10px;
+} */
+
+.comment::placeholder{
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .form-title{
-  margin-bottom: 12px;
+  margin-bottom: 30px;
   margin-top: 0;
 
   font-weight: 700;
@@ -778,43 +793,102 @@ margin-bottom: 20px;
   color: var(--title-color);
 }
 
-.contact-field label{
-  margin-bottom: 4px;
-
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: var(--text-color);
-}
-
-.form-field textarea {
+.comment {
   padding: 12px 16px;
+  width: 100%;
+
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   resize: none;
 }
 
-.form-field textarea::placeholder{
-  color: rgba(117, 117, 117, 0.5);
+.form-input{
+  display: inline-block;
+  height: 40px;
+  width: 100%;
+  margin: 0;
+  padding: 11px 12px;
+  padding-left: 40px;
+  font: inherit;
 }
 
-.form-field input, .form-field textarea{
+.modal-icon{
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: currentColor;
+}
+
+.form-label{
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--text-color);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:focus-within > .modal-icon {
+  color: var(--accent-color);
+}
+
+.form-field:focus-within > .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translate(-40px, -40px)
+}
+
+
+.comment-label{
+  position: absolute;
+  left: 16px;
+  top: 12px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--text-color);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:focus-within > .comment-label,
+.comment:not(:placeholder-shown) + .comment-label {
+  transform: translate(-16px, -30px)
+}
+
+.form-field:not(:focus-within) > .comment::placeholder{
+  opacity: 0;
+}
+
+.form-input, .form-field textarea{
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field input:hover,
-.form-field input:focus,
+.form-input:hover,
+.form-input:focus,
 .form-field textarea:hover,
 .form-field textarea:focus{
   border: 1px solid var(--accent-color);
   border-color: var(--accent-color);
  }
 
+ .comment-label{
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--text-color);
+}
 
 .form-field label[for="policy"]{
   font-size: 14px;
