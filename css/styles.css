@@ -8,7 +8,7 @@
 :root {
   --text-color: #757575;
   --title-color: #212121;
-  --accent-color: rgb(238, 130, 238); 
+  --accent-color: #2196f3; 
   --secondary-accent-color: #188ce8;
   --transparent-white-color: rgba(255, 255, 255, 0.6);
   --white-color: #ffffff;
@@ -17,7 +17,6 @@
   --logo-color: #000000;
   --border-color: #eeeeee;   
   --social-links: #AFB1B8;
-  /* #2196f3; */
 }
 
 body {
@@ -42,10 +41,10 @@ img{
 
 /* HEADER */
 
-.page-header{
+.header{
   border-bottom: 1px solid #ECECEC;
 }
-.main-nav{
+.nav-container{
   display: flex;
   align-items: center;
 }
@@ -55,12 +54,12 @@ img{
   align-items: center;
 }
 
-.site-nav{
+.nav-list{
   display: flex;
   margin-left: 93px;
 }
 
-.site-nav .item + .item{
+.nav-list .item + .item{
   margin-left: 50px;
 }
 
@@ -72,6 +71,7 @@ img{
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
+
 .logo-light {
   color: var(--logo-color);
 }
@@ -131,7 +131,7 @@ img{
   color: var(--text-color);
 }
 
-.contact-list .item{
+.contact-mail, .contact-tel{
   display: flex;
   align-items: center;
   margin-left: 30px;
