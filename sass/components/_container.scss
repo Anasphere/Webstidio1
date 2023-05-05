@@ -1,6 +1,29 @@
+.body {
+  font-family: "Roboto", sans-serif;
+  color: $color-title;
+  background-color: $color-white;
+}
+
+.section {
+  margin-bottom: 94px;
+}
+
 .container {
-    /* outline: 2px solid teal; */
-    width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
-  }
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section-title {
+  margin-bottom: 50px;
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+img{
+  display: block;
+}
