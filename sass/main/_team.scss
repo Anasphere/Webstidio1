@@ -8,7 +8,7 @@
 
 .team-list{
     @extend %list;
-    display: flex;
+    @include flex-center;
   }
 
   .team-card {

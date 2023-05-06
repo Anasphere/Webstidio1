@@ -1,6 +1,6 @@
 .clients-list{
     @extend %list;
-    @extend %flex-center;
+    @include flex-center;
   }
   
   .clients-list__item:not(:last-child){

@@ -1,5 +1,5 @@
 .social-list {
-  @extend %flex-center;
+  @include flex-center;
   @extend %list;
   margin-bottom: 30px;
 }
@@ -9,22 +9,5 @@
 }
 
 .social-list__link {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 44px;
-  height: 44px;
-
-  border-radius: 50%;
-
-  fill: $color-social-links;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    background-color: $color-accent;
-    fill: $color-white;
-  }
+  @include social-links($color-social-links, $color-white);
 }

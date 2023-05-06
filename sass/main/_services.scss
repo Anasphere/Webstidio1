@@ -1,6 +1,6 @@
 .serv-list{
     @extend %list;
-    display: flex;
+    @include flex-center;
   }
   
   .serv-list__item:not(:last-child){
@@ -32,11 +32,8 @@
     padding-top: 27px;
     padding-bottom: 27px;
   
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+    @extend %upper-title;
     text-align: center;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+    
     color: $color-white;
   }

@@ -2,12 +2,9 @@
   border-bottom: 1px solid #ececec;
 }
 
-.nav-container {
-  @extend %flex-center;
-}
-
+.nav-container,
 .nav-flex {
-  @extend %flex-center;
+  @include flex-center;
 }
 
 .nav-list {
@@ -69,22 +66,23 @@
 
 .contact-list {
   @extend %list;
-  @extend %flex-center;
+  @include flex-center;
   margin-left: auto;
 }
 
 .contact-list__item {
-  @extend %flex-center;
+  @include flex-center;
   color: $color-text;
+  
   &:not(:last-child) {
     margin-right: 30px;
   }
 }
 
-.ontact-list__mail-link,
-.ontact-list__tel-link {
+.contact-list__mail-link,
+.contact-list__tel-link {
   @extend %link;
-  @extend %flex-center;
+  @include flex-center;
   color: $color-text;
 
   .contact-list__item:hover &,
@@ -94,8 +92,8 @@
 }
 
 .contact-list__mail-icon,
-.ontact-list__tel-icon {
-  @extend %flex-center;
+.contact-list__tel-icon {
+  @include flex-center;
   margin-right: 10px;
   fill: currentColor;
 
