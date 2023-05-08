@@ -1,4 +1,5 @@
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
 *, ::after, ::before {
   box-sizing: border-box;
 }
@@ -123,7 +124,11 @@ summary {
   display: list-item;
 }
 
-.join-list, .address-list, .filter-list, .contact-list, .nav-list {
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.join-list, .address-list, .project-list, .filter-list, .contact-list, .nav-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -134,18 +139,10 @@ summary {
   text-decoration: none;
 }
 
-.join-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
 .body {
-  font-family: "Roboto", sans-serif;
   color: #212121;
   background-color: #ffffff;
+  font-family: "Roboto", sans-serif;
 }
 
 .section {
@@ -172,10 +169,10 @@ img {
   display: block;
 }
 
-h3 {
+.join-title, .serv-list__text, .features-list__title {
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -294,6 +291,7 @@ h3 {
 
 .logo {
   font-family: "Raleway", sans-serif;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;

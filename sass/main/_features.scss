@@ -25,13 +25,13 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: $color-grey-light;
+  border-radius: 4px;
 }
 
 .features-list__title {
   margin-bottom: 10px;
   margin-top: 0;
-  
-  @extend %upper-title;
+
   color: $color-title;
 }
 
