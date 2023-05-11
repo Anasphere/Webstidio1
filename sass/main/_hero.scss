@@ -1,6 +1,6 @@
 .hero {
-  padding: 200px 0;
-  margin-bottom: 94px;
+  @include flex-center;
+  margin-bottom: 60px;
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
@@ -13,6 +13,10 @@
 
   .container {
     text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 94px;
   }
 }
 
