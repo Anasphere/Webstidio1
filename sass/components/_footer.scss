@@ -1,15 +1,26 @@
 .footer {
   padding: 60px 0;
   background-color: $color-bg;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    .tablet-container {
+      display: flex;
+      justify-content: space-around
+    }
+  }
 }
 
 .footer-logo {
   color: $color-white;
 }
 
+.address {
+  margin-top: 20px;
+}
+
 .address-list {
   @extend %list;
-  margin-top: 20px;
 
   font-size: 14px;
   line-height: 1.71;
@@ -42,14 +53,14 @@
   }
 }
 
-.footer .container {
-  display: flex;
-}
-
 .join {
   display: inline-block;
-  margin-top: 12px;
-  margin-left: 70px;
+  margin: 60px 0;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 12px;
+    margin-left: 70px;
+  }
 }
 
 .join-title {
@@ -64,10 +75,76 @@
   @extend %list;
 }
 
-.join-list__item:not(:last-child){
+.join-list__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.join-list__link{
-  @include social-links($color-white, $color-bg-social)
+.join-list__link {
+  @include social-links($color-white, $color-bg-social);
+}
+
+.subscribe{
+  @media screen and (min-width: $tablet) {
+    margin-top: 60px;
+  }
+}
+
+.subscribe-field {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+
+.subscribe-input {
+  display: inline-block;
+  height: 40px;
+  width: 100%;
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  font: inherit;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.subscribe-button {
+  position: relative;
+
+  @extend %button;
+  margin: 0 auto;
+  padding: 10px 64px 10px 31px;
+  min-width: 200px;
+
+  @media screen and (min-width: $tablet) {
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent-secondary;
+  }
+}
+
+.subscribe-icon {
+  position: absolute;
+
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+
+  fill: $color-white;
+  display: block;
+  margin: auto;
 }
