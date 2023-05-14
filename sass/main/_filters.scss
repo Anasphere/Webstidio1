@@ -14,7 +14,7 @@
   row-gap: 15px;
   margin-bottom: 40px;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     @include flex-center;
     margin-bottom: 34px;
   }

@@ -10,7 +10,14 @@
 .nav-list {
   @extend %list;
   display: flex;
-  margin-left: 93px;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 93px;
+  }
 }
 
 .nav-list__item + .nav-list__item {
@@ -66,16 +73,31 @@
 
 .contact-list {
   @extend %list;
-  @include flex-center;
-  margin-left: auto;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 90px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include flex-center;
+    margin-left: auto;
+  }
 }
 
 .contact-list__item {
-  @include flex-center;
+  display: flex;
+  align-items: center;
   color: $color-text;
-  
+
   &:not(:last-child) {
-    margin-right: 30px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include flex-center;
+      margin-right: 30px;
+    }
   }
 }
 
@@ -84,6 +106,12 @@
   @extend %link;
   @include flex-center;
   color: $color-text;
+    @media screen and (min-width: $tablet) {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+    }
 
   .contact-list__item:hover &,
   .contact-list__item:focus & {
@@ -94,8 +122,11 @@
 .contact-list__mail-icon,
 .contact-list__tel-icon {
   @include flex-center;
-  margin-right: 10px;
   fill: currentColor;
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 8px;
+  }
 
   .contact-list__item:hover &,
   .contact-list__item:focus & {
