@@ -223,18 +223,17 @@ img {
 }
 @media screen and (min-width: 768px) {
   .nav-list {
-    margin-left: 88px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .nav-list {
-    margin-left: 93px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
   }
 }
 
-.nav-list__item:not(:last-child) {
-  display: block;
-  margin-bottom: 32px;
+@media screen and (max-width: 768px) {
+  .nav-list__item:not(:last-child) {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -290,6 +289,11 @@ img {
   border: none;
   background-color: transparent;
 }
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
 .menu-button .icon-cross {
   display: none;
 }
@@ -300,22 +304,30 @@ img {
   display: none;
 }
 
-.menu-container {
-  position: absolute;
-  display: none;
-  z-index: 999;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #ffffff;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 40px;
-  text-align: left;
-  font-size: 20px;
+@media screen and (max-width: 768px) {
+  .menu-container {
+    position: absolute;
+    display: none;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    text-align: left;
+    font-size: 20px;
+  }
 }
 .menu-container.is-open {
   display: block;
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: flex;
+    margin-left: 88px;
+  }
 }
 
 .contact-list {
@@ -325,13 +337,13 @@ img {
 @media screen and (min-width: 768px) {
   .contact-list {
     margin-left: 90px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 1200px) {
   .contact-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-left: auto;
   }
 }
@@ -341,11 +353,13 @@ img {
   align-items: center;
   color: #757575;
 }
-.contact-list__item:last-child {
-  margin-bottom: 32px;
+@media screen and (max-width: 767px) {
+  .contact-list__item:last-child {
+    margin-bottom: 32px;
+  }
 }
 @media screen and (min-width: 768px) {
-  .contact-list__item {
+  .contact-list__item:not(:last-child) {
     margin-bottom: 10px;
   }
 }
@@ -382,10 +396,11 @@ img {
   color: #2196f3;
 }
 
-.contact-list__mail-link {
-  font-size: 24px;
+@media screen and (max-width: 480px) {
+  .contact-list__mail-link {
+    font-size: 24px;
+  }
 }
-
 .contact-list__mail-icon,
 .contact-list__tel-icon {
   display: none;

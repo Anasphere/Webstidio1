@@ -15,17 +15,15 @@
   margin-bottom: 302px;
 
   @media screen and (min-width: $tablet) {
-    margin-left: 88px;
-  }
-
-  @media screen and (min-width: $tablet) {
-    margin-left: 93px;
+    @include flex-center;
+    margin-bottom: 0;
   }
 }
 
 .nav-list__item:not(:last-child) {
-  display: block;
-  margin-bottom: 32px;
+  @media screen and (max-width: $tablet) {
+    display: block;
+  }
 }
 
 .nav-list__item + .nav-list__item {
@@ -108,6 +106,10 @@
   border: none;
   background-color: transparent;
 
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
   .icon-cross {
     display: none;
   }
@@ -122,24 +124,31 @@
 }
 
 .menu-container {
-  position: absolute;
-  display: none;
-
-  z-index: 999;
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    display: none;
   
-  top: 100%;
-  left: 0;
-  width: 100%;
-
-  background-color: $color-white;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 40px;
-  text-align: left;
-  font-size: 20px;
+    z-index: 999;
+  
+    top: 100%;
+    left: 0;
+    width: 100%;
+  
+    background-color: $color-white;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    text-align: left;
+    font-size: 20px;
+  }
 
   &.is-open {
     display: block;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: 88px;
   }
 }
 // CONTACTS
@@ -151,10 +160,12 @@
 
   @media screen and (min-width: $tablet) {
     margin-left: 90px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
   }
 
   @media screen and (min-width: $desktop) {
-    @include flex-center;
     margin-left: auto;
   }
 }
@@ -165,11 +176,15 @@
   color: $color-text;
 
   &:last-child {
-    margin-bottom: 32px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+    }
   }
 
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 10px;
+  &:not(:last-child) {
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 10px;
+    }
   }
 
   @media screen and (min-width: $desktop) {
@@ -203,8 +218,10 @@
   }
 }
 
-.contact-list__mail-link{
-  font-size: 24px;
+@media screen and (max-width: $mobile) {
+  .contact-list__mail-link {
+    font-size: 24px;
+  }
 }
 
 .contact-list__mail-icon,
