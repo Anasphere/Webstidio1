@@ -93,12 +93,15 @@
             <li class="project-item">
               <div class="project-thumb">
                 <img
-                  src="./images/projects/texnokr.svg"
-                  alt="Вебсайт Технокряк"
-                  class="project-img"
-                  width="370"
-                  height="294"
-                />
+                srcset="
+                texno.jpg   300w,
+                texno2x.jpg   600w,
+                texno3x.jpg   900w,
+              "
+              sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                src="./images/projects/texno.jpg"
+                alt="Опис зображення для всіх версій"
+              />
                 <div class="project-overlay">
                   <p class="project-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем

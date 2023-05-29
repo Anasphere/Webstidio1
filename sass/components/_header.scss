@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
 
-  .logo{
+  .logo {
     @media screen and (min-width: $desktop) {
       margin-right: 92px;
     }
@@ -149,7 +149,7 @@
 
   &.is-open {
     display: block;
-     & ~ .logo{
+    & ~ .logo {
       background-color: aqua;
       display: none;
     }
@@ -171,12 +171,14 @@
   @extend %list;
   display: flex;
   flex-direction: column-reverse;
+  margin-bottom: 64px;
 
   @media screen and (min-width: $tablet) {
     margin-left: 90px;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: $desktop) {
@@ -202,7 +204,7 @@
     @media screen and (max-width: $desktop) and (min-width: $tablet) {
       margin-bottom: 10px;
     }
-    
+
     @media screen and (min-width: $desktop) {
       margin-right: 30px;
     }
@@ -253,5 +255,37 @@
   .contact-list__item:hover &,
   .contact-list__item:focus & {
     color: $color-accent;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .social-list__header {
+    @include flex-center;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-link__header {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    color: $color-accent;
+  }
+
+  .social-item__header:not(:last-child) {
+    margin-right: 20px;
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .social-list__header{
+    display: none;
   }
 }
