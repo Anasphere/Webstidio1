@@ -1,6 +1,7 @@
 .services{
-  @media screen and (max-width: $desktop) {
-    display: none;
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: block;
   }
 }
 
